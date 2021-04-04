@@ -33,8 +33,8 @@ server.listen(port);
 
 
 wss.on('connection',function callback(ws){
-  ws.on('message',function cb(){
-    ws.send('hello from sockets');
+  ws.on('message',function cb(message){
+    ws.send('hello from sockets', message);
 
   })
 })
